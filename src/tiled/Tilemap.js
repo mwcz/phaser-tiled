@@ -177,7 +177,7 @@ function Tilemap(game, key, group) {
                 break;
 
             case 'imagelayer':
-                lyr = game.add.sprite(ldata.x, ldata.y, utils.cacheKey(key, 'layer', ldata.name), null, this);
+                lyr = game.add.sprite(ldata.x + (ldata.offsetx || 0), ldata.y + (ldata.offsety || 0), utils.cacheKey(key, 'layer', ldata.name), null, this);
 
                 lyr.visible = ldata.visible;
                 lyr.apha = ldata.opacity;
